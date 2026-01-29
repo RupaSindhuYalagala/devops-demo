@@ -36,6 +36,11 @@ pipeline {
                 bat 'docker push %IMAGE_NAME%:latest'
             }
         }
+stage('Test Kube Access') {
+    steps {
+        bat 'kubectl get pods'
+    }
+}
         
         stage('Deploy to Kubernetes') {
     steps {

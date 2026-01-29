@@ -4,6 +4,8 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
         IMAGE_NAME = "rupasindhu/devops-demo"
+        KUBECONFIG = "C:\\ProgramData\\Jenkins\\.kube\\config"
+
     }
 
     stages {
